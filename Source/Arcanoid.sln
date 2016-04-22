@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcanoid", "Arcanoid\Arcanoid.csproj", "{BCFDA1E5-3781-47B9-BCE5-39A9031DB918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcanoid.Core", "Arcanoid.Core\Arcanoid.Core.csproj", "{CD3461FD-C3C3-48CF-96D5-F50B1F5BFAB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arcanoid.Environments", "Arcanoid.Environments\Arcanoid.Environments.csproj", "{3296488F-7AA8-4A04-B452-3336089A8D7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCFDA1E5-3781-47B9-BCE5-39A9031DB918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFDA1E5-3781-47B9-BCE5-39A9031DB918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFDA1E5-3781-47B9-BCE5-39A9031DB918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFDA1E5-3781-47B9-BCE5-39A9031DB918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3461FD-C3C3-48CF-96D5-F50B1F5BFAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3461FD-C3C3-48CF-96D5-F50B1F5BFAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3461FD-C3C3-48CF-96D5-F50B1F5BFAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3461FD-C3C3-48CF-96D5-F50B1F5BFAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3296488F-7AA8-4A04-B452-3336089A8D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3296488F-7AA8-4A04-B452-3336089A8D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3296488F-7AA8-4A04-B452-3336089A8D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3296488F-7AA8-4A04-B452-3336089A8D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
