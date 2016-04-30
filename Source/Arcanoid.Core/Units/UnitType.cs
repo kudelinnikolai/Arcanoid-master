@@ -5,6 +5,7 @@
         Player,
         Block,
         Ball,
-        Wall
+        Wall,
+        Bonus
     }
 }

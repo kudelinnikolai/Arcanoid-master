@@ -47,10 +47,13 @@ namespace Arcanoid.Environments.Units
 
         public override void Collided(BaseUnit baseUnit)
         {
-            double angle = CollisionChecker.GetAngle(_angle, _lastPosition, this, baseUnit);
-            double randomAngle = new Random().NextDouble() / 10;
-            int sign = new Random().Next() % 2 == 0 ? -1 : 1;
-            _angle = angle + sign * randomAngle;
+            if (baseUnit.UnitType != UnitType.Bonus)
+            {
+                double angle = CollisionChecker.GetAngle(_angle, _lastPosition, this, baseUnit);
+                double randomAngle = new Random().NextDouble() / 10;
+                int sign = new Random().Next() % 2 == 0 ? -1 : 1;
+                _angle = angle + sign * randomAngle;
+            }
         }
 
         public override void Load()
@@ -72,6 +75,7 @@ namespace Arcanoid.Environments.Units
             Size levelSize = Info.GetLevelSize();
             if (Position.Y > levelSize.Height)
                 Info.RemoveUnit(this);
+           
         }
 
         #endregion

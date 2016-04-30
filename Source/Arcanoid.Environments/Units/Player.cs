@@ -56,6 +56,12 @@ namespace Arcanoid.Environments.Units
                     Position = new Point(baseUnit.Position.X + baseUnit.Width, Position.Y);
                     break;
             }
+
+            /*if (baseUnit.UnitType == UnitType.Bonus)
+            {
+                Width = Width * 2;
+
+            }*/
         }
 
         public override void Load()

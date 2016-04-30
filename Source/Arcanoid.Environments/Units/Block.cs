@@ -1,6 +1,7 @@
 ﻿#region using
 
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Arcanoid.Core.Environment;
 using Arcanoid.Core.Units;
@@ -29,7 +30,16 @@ namespace Arcanoid.Environments.Units
         public override void Collided(BaseUnit baseUnit)
         {
             if (baseUnit.UnitType == UnitType.Ball)
+            {
                 Info.RemoveUnit(this);
+
+                //если блок с бонусом - на этом месте генерируем рандомный бонус
+                Bonus bonus = new Bonus(Info);
+                bonus.Load();
+                bonus.Position = new Point(Position.X, Position.Y);
+                
+                Info.AddUnit(bonus);
+            }
         }
 
         public override void Load()
