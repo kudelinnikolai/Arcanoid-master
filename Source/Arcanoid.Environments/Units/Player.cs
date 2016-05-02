@@ -3,6 +3,7 @@
 using System;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Arcanoid.Core.Collision;
 using Arcanoid.Core.Environment;
 using Arcanoid.Core.Units;
@@ -34,7 +35,8 @@ namespace Arcanoid.Environments.Units
             Width = 80;
             Height = 20;
             UnitType = UnitType.Player;
-            Ball = new Ball(info);
+                Random rnd = new Random();
+            Ball = (rnd.Next(0, 2)==0)? new Ball(info): Ball = new GooBall(info);
             info.AddUnit(Ball);
         }
 
@@ -57,11 +59,10 @@ namespace Arcanoid.Environments.Units
                     break;
             }
 
-            /*if (baseUnit.UnitType == UnitType.Bonus)
+            if (baseUnit.UnitType == UnitType.Bonus)
             {
-                Width = Width * 2;
-
-            }*/
+                //Width = Width * 2;
+            }
         }
 
         public override void Load()
@@ -114,5 +115,17 @@ namespace Arcanoid.Environments.Units
         }
 
         #endregion
+
     }
+
+    #region Interfaces
+
+    public interface IBallable
+    {
+        bool IsFlying { get; set; }
+        Point Position { get; set; }
+        int Width { get; set; }
+        int Height { get; set; }
+    }
+    #endregion
 }

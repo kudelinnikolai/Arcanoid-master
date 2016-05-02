@@ -67,6 +67,8 @@ namespace Arcanoid.Environments
             Units.Add(Walls.GetLeftWall(this));
             Units.Add(Walls.GetRightWall(this));
             Units.Add(Walls.GetTopWall(this));
+            Units.Add(Walls.GetBottomWall(this));
+
         }
 
         #endregion

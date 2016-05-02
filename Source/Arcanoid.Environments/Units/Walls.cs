@@ -71,6 +71,21 @@ namespace Arcanoid.Environments.Units
             return wall;
         }
 
+        public static Walls GetBottomWall(ILevelInfo info)
+        {
+            Size levelSize = info.GetLevelSize();
+
+            const int height = 30;
+            Walls wall = new Walls(info)
+            {
+                Position = new Point(-height, levelSize.Height),
+                Width = levelSize.Width + 2 * height,
+                Height = height
+            };
+
+            return wall;
+        }
+
         public override void Load()
         {
             Load("Assets\\wall.png");

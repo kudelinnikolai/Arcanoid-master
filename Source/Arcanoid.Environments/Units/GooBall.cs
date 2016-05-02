@@ -10,14 +10,8 @@ using Arcanoid.Core.Units;
 
 namespace Arcanoid.Environments.Units
 {
-    public class Ball : BaseUnit
+    class GooBall : Ball, IBallable
     {
-        #region Constants
-
-        internal const double Speed = 6;
-
-        #endregion
-
         #region Private Fields
 
         private double _angle = Math.PI / 5;
@@ -27,32 +21,18 @@ namespace Arcanoid.Environments.Units
 
         #region Constructors
 
-        public Ball(ILevelInfo info)
+        public GooBall(ILevelInfo info)
             : base(info)
-        {
-            Width = 10;
-            Height = 10;
-            UnitType = UnitType.Ball;
-        }
+        {   }
 
         #endregion
 
         #region Public Properties
 
-        public bool IsFlying { get; set; }
-        public override Point Position { get; set; }
-
-        public new int Width
-        {
-            get { return base.Width; }
-            set { base.Width = value; }
-        }
-
-        public new int Height
-        {
-            get { return base.Height; }
-            set { base.Height = value; }
-        }
+        //public bool IsFlying { get; set; }
+        //public override Point Position { get; set; }
+        //public new int Width { get; set; }
+        //public new int Height { get; set; }
 
         #endregion
 
@@ -60,6 +40,11 @@ namespace Arcanoid.Environments.Units
 
         public override void Collided(BaseUnit baseUnit)
         {
+            if (baseUnit.UnitType == UnitType.Player)
+            {
+                IsFlying = false;
+            }
+
             if (baseUnit.UnitType != UnitType.Bonus)
             {
                 double angle = CollisionChecker.GetAngle(_angle, _lastPosition, this, baseUnit);
@@ -88,9 +73,8 @@ namespace Arcanoid.Environments.Units
             Size levelSize = Info.GetLevelSize();
             if (Position.Y > levelSize.Height)
                 Info.RemoveUnit(this);
-           
-        }
 
-        #endregion
+        }
+    #endregion
     }
 }

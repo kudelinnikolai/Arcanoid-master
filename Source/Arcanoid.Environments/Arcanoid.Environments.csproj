@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Units\Bonus.cs" />
+    <Compile Include="Units\GooBall.cs" />
     <Compile Include="Units\Player.cs" />
     <Compile Include="Units\Block.cs" />
     <Compile Include="Units\Ball.cs" />
@@ -62,24 +63,14 @@
     <Content Include="Assets\ball.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\blocks\block1.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\blocks\block2.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\blocks\block3.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\blocks\block4.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\blocks\block5.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\blocks\block6.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Assets\blocks\block1.png" />
+    <Content Include="Assets\blocks\block2.png" />
+    <Content Include="Assets\blocks\block3.png" />
+    <Content Include="Assets\blocks\block4.png" />
+    <Content Include="Assets\blocks\block5.png" />
+    <Content Include="Assets\blocks\block6.png" />
+    <Content Include="Assets\blocks\block7.png" />
+    <Content Include="Assets\blocks\block8.png" />
     <Content Include="Assets\LevelOne.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
